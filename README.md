@@ -1,6 +1,38 @@
-# My Vite Project
+# NYT News App
 
-This project is built using Vite, a fast and lightweight development build tool for modern web applications.
+This project is a React-based web application that allows users to search for news articles using the New York Times Article Search API.
+
+## Features
+
+- Search for news articles by keyword
+- Display article details including headlines, snippets, and images
+- Responsive design for various screen sizes
+
+## Technologies Used
+
+- React
+- Vite
+- Axios for API requests
+- Tailwind CSS for styling
+- Express.js for backend proxy
+
+## NYT API Usage
+
+This application uses the New York Times Article Search API. Here's how we interact with the API:
+
+1. **API Endpoint**: We use the Article Search API endpoint:
+   `https://api.nytimes.com/svc/search/v2/articlesearch.json`
+
+2. **Search Functionality**: When a user enters a search term, we send a GET request to our backend proxy with the search query. The backend then forwards this request to the NYT API, adding the API key.
+
+3. **Request Format**: A typical request URL looks like this:
+   `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=SEARCH_TERM&api-key=YOUR_API_KEY`
+
+4. **Response Handling**: The API returns a JSON response containing article data. We parse this response and display the relevant information (headline, snippet, multimedia) in our application.
+
+5. **Image Handling**: The API doesn't always return full image URLs. We construct the full URLs using a base URL and the partial paths provided in the API response.
+
+6. **Error Handling**: We implement error handling to manage cases where the API request fails or returns unexpected data.
 
 
 ## Getting Started
