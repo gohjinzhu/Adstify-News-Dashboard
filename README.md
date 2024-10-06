@@ -15,6 +15,7 @@ This project is built using Vite, a fast and lightweight development build tool 
    ```
    npm install
    ```
+3. Copy .env file to project root directory:
 
 3. Start the development server:
    ```
